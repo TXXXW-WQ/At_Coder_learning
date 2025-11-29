@@ -18,6 +18,6 @@ sys.stdin = io.StringIO(_INPUT)
 ###################################################
 
 n,w = map(int,input().split())
-
+dp = [[0] * (w+1) for _ in range(n+1)]
 for _ in range(n):
   
