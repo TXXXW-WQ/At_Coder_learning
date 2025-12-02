@@ -6,10 +6,14 @@ import io
 import sys
 
 _INPUT = """\
-3 8
-3 30
-4 50
-5 60
+6 15
+6 5
+5 6
+6 4
+6 6
+3 5
+7 2
+
 """
 sys.stdin = io.StringIO(_INPUT)
 
@@ -18,7 +22,7 @@ sys.stdin = io.StringIO(_INPUT)
 n,w = map(int, input().split())
 dp = [[0] * (w+1) for _ in range(n+1)]
 for i in range(1,n):
-  vi, wi = map(int, input().split())
+  wi, vi = map(int, input().split())
   for j in range(w+1):
     if j < wi:
       dp[i+1][j] = dp[i][j]
